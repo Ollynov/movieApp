@@ -7,50 +7,56 @@ class App extends React.Component {
   	super(props);
 
   	this.state = {
-  		data: []
+  		data: [
+        {
+         title: 'Batman',
+         rating: 10,
+         image: 'http://screencrave.com/wp-content/uploads/2012/07/Batman-The-Dark-Knight-Rises.jpg'
+        }
+      ]
   	};
-  }
+  };
 
   render() {
     return (
       <div id='container'>
         <div>
-          <Title title={this.state.data.title} />
+          <Title title={this.state.data[0].title} />
         </div>
         <div>
-          <Image image={this.state.data.image} />
+          <Image image={this.state.data[0].image} />
         </div>
         <div>
-          <Rating rating={this.state.data.rating} />
+          <Rating rating={this.state.data[0].rating} />
         </div>
         <p>
   		    <a href="/submit">Submit movie.</a> ~ <a href="/">Get Movie Recommendation.</a>
   		  </p>
       </div>
     );
-  }
+  };
 }
 // the two links at bootom need to be its own component obviously
 
 
 var Title = ({title}) => (
   <div id="title">
-    <h2>{this.props.title}</h2>
+    <h2>{title}</h2>
   </div>
-);
+)
 // Did we pass in the title between the h2 tags correctly?
 
-// var Image = ({image}) => (
-//   <div id="title">
-//     <a href={this.props.image}/>
-//   </div>
-// );
+var Image = ({image}) => (
+  <div id="image">
+   <img src={image} alt="batman" />
+  </div>
+)
 
-// var Rating = ({rating}) => (
-//   <div id="title">
-//     <div>{this.props.rating}</div>
-//   </div>
-// );
+var Rating = ({rating}) => (
+  <div id="rating">
+    <p>{rating}</p>
+  </div>
+)
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
