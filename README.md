@@ -10,7 +10,7 @@ picture of a random movie, the rating of that movie (number from 1-10), and two 
 SETUP
 -package.json √
 - npm install dependencies √
-- bower install dependencies (gulp)
+- install eslint
 - file structure process file, compiled file, (views file holding components), server config file, data.json file
 
 RENDERING
