@@ -1,3 +1,5 @@
+// still need to add minify
+
 var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     webserver = require('gulp-webserver');
@@ -6,7 +8,7 @@ var src = './process',
     app = './compiled';
 
 gulp.task('js', function() {
-	return gulp.src( src + '/js/app.js' )
+	return gulp.src( src + '/components/app.js' )
 	  .pipe(browserify({
 	  	transform: 'reactify',
 	  	debug: true
@@ -14,9 +16,9 @@ gulp.task('js', function() {
 	  .on('error', function(err) {
 	  	console.error('gulp task js is picking up error: ', err.message);
 	  })
-	  .pipe(gulp.dest(app + '/js'));
+	  .pipe(gulp.dest(app));
 }); // Compiling everything from the process folder into the compiled folder (converting jsx)
-// Notice how only the single js/app.js file is being compiled. Is this ok? I guess it grabs the other files because they are required?
+// Notice how only the single components/app.js file is being compiled. Is this ok? I guess it grabs the other files because they are required?
 // Need to find out how frequently this needs to be run... once on each default task call? How does it pick up changes?
 
 gulp.task('html', function() {

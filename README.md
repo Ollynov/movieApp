@@ -31,6 +31,7 @@ they then submit title
 
 ///////////////
 MVP V3.0
+setup: add minification in gulp
 feature add: "display all" button that displays all movies and their ratings in a dropdown (implement the map function)
 improvement: change number rating to a star rating
 authentication: signup
