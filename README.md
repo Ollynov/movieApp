@@ -1,7 +1,7 @@
 # Project Name #
 <!--
 ////////////////////
-MVP V1. Deadline 12:30
+MVP V1. Deadline 3:30
 Our movie app will allow a user to enter homescreen and see title,
 picture of a random movie, the rating of that movie (number from 1-10), and two buttons under photo:
 "Im feeling lucky" button will just reload the page
@@ -10,7 +10,7 @@ picture of a random movie, the rating of that movie (number from 1-10), and two 
 SETUP
 -package.json √
 - npm install dependencies √
-- install eslint
+- install eslint √
 - file structure process file, compiled file, (views file holding components), server config file, data.json file
 
 RENDERING
@@ -18,15 +18,20 @@ index.html (homepage)
 submit.html
 
 NOTES:
+- render first movie to homepage (image, title, rating number)
+- render submit page
 - initial movie image can be stored in a json file rather than database
 
 ////////////////////
-MVP V2.0
+MVP V2.0 7:00PM deadline
 submit.html
 User sees a brief text overview of how legit of a movie they need to submit
 they then submit title
  - submit number rating
  - submit url of image
+
+ 9:00PM deadline re-render page with a random image from JSON data file
+ Looking decent as well
 
 
 ///////////////
