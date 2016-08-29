@@ -8,8 +8,8 @@ picture of a random movie, the rating of that movie (number from 1-10), and two 
 "Submit movie" will take you to the submit.html (blank html page for MVP)
 
 SETUP
--package.json
-- npm install dependencies
+-package.json √
+- npm install dependencies √
 - bower install dependencies (gulp)
 - file structure process file, compiled file, (views file holding components), server config file, data.json file
 
