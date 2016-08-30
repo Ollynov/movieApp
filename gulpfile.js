@@ -7,17 +7,17 @@ var gulp = require('gulp'),
 var src = './process',
     app = './compiled';
 
-// gulp.task('js', function() {
-// 	return gulp.src( src + '/components/app.jsx' )
-// 	  .pipe(browserify({
-// 	  	transform: ['reactify'],
-// 	  	debug: true
-// 	  }))
-// 	  .on('error', function(err) {
-// 	  	console.error('gulp task js is picking up error on react compile: ', err.message);
-// 	  })
-// 	  .pipe(gulp.dest(app + '/js'));
-// }); // Compiling everything from the process folder into the compiled folder (converting jsx)
+gulp.task('js', function() {
+	return gulp.src( app + 'js/components/app.jsx' )
+	  .pipe(browserify({
+	  	transform: ['reactify'],
+	  	debug: true
+	  }))
+	  .on('error', function(err) {
+	  	console.error('gulp task js is picking up error on react compile: ', err.message);
+	  })
+	  .pipe(gulp.dest(app + '/js'));
+}); // Compiling everything from the process folder into the compiled folder (converting jsx)
 // Notice how only the single components/app.js file is being compiled. Is this ok? I guess it grabs the other files because they are required?
 // Need to find out how frequently this needs to be run... once on each default task call? How does it pick up changes?
 
